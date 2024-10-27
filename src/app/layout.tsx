@@ -1,7 +1,8 @@
-import { TopNav } from "@/_components/topnav";
 import "@/styles/globals.css";
-import { ClerkProvider } from "@clerk/nextjs";
+import "@uploadthing/react/styles.css";
 
+import { TopNav } from "@/_components/topnav";
+import { ClerkProvider } from "@clerk/nextjs";
 import { GeistSans } from "geist/font/sans";
 import { type Metadata } from "next";
 
