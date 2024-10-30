@@ -9,15 +9,15 @@ async function ImageList() {
   const images = await getMyImages();
 
   return (
-    <div className="flex flex-wrap justify-center gap-4">
-      {images.map((item) => {
+    <div className="flex flex-wrap justify-center gap-4 p-4">
+      {[...images, ...images, ...images, ...images].map((item) => {
         return (
           <div key={item.id} className="flex h-48 w-48 flex-col">
             <Link href={`/img/${item.id}`}>
               <Image
                 src={item.url}
                 style={{
-                  objectFit: "contain",
+                  objectFit: "cover",
                 }}
                 width={192}
                 height={192}
