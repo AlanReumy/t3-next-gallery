@@ -1,4 +1,5 @@
-import { getImage } from "@/server/quries";
+import { Modal } from "./modal";
+import FullPageImageView from "@/components/full-image-page";
 
 const PhotoModal = async ({
   params: { id: photoId },
@@ -6,12 +7,10 @@ const PhotoModal = async ({
   params: { id: string };
 }) => {
   const idAsNumber = Number(photoId);
-  const image = await getImage(idAsNumber);
-
   return (
-    <div>
-      <img src={image.url} className="w-96" alt="" />
-    </div>
+    <Modal>
+      <FullPageImageView id={idAsNumber} />
+    </Modal>
   );
 };
 

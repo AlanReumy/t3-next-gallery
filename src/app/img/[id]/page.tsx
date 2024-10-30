@@ -1,9 +1,12 @@
-const PhotoModal = ({
+import FullPageImageView from "@/components/full-image-page";
+
+const PhotoPage = async ({
   params: { id: photoId },
 }: {
   params: { id: string };
 }) => {
-  return <div>{photoId}</div>;
+  const idAsNumber = Number(photoId);
+  return <FullPageImageView id={idAsNumber} />;
 };
 
-export default PhotoModal;
+export default PhotoPage;

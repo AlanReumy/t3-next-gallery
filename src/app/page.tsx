@@ -1,4 +1,4 @@
-import { getMyImages } from "@/server/quries";
+import { getMyImages } from "@/server/queries";
 import { SignedIn, SignedOut } from "@clerk/nextjs";
 import Image from "next/image";
 import Link from "next/link";
